@@ -1,0 +1,33 @@
+[System]
+-- specify system name
+Name: Studienstatistik
+
+[Parameter]
+-- general syntax is parameter_name : value1, value2, …
+Geschlecht (enum) : weibl, maennl
+Alter (enum) : lt20, 20_22, 23_25, gt25
+Herkunft (enum) : D, EU, RestDerWelt
+Dauer (enum) : Regel, RegelPlus1, laenger
+Fach (enum) : Technik, Geisteswiss, Sonst
+
+[Relation]
+-- this section is optional
+-- general format Rx : (p1, p2, …, pk, Strength)
+
+
+[Test Set]
+-- set existing test set for extend mode. this is also optional
+-- * represents don't-care value
+Geschlecht,Alter,Herkunft,Dauer,Fach
+maennl,lt20,D,RegelPlus1,Geisteswiss
+weibl,lt20,EU,laenger,Sonst
+maennl,lt20,RestDerWelt,Regel,Technik
+weibl,20_22,D,laenger,Technik
+maennl,20_22,EU,Regel,Geisteswiss
+weibl,20_22,RestDerWelt,RegelPlus1,Sonst
+maennl,23_25,D,Regel,Sonst
+weibl,23_25,EU,RegelPlus1,Technik
+maennl,23_25,RestDerWelt,laenger,Geisteswiss
+weibl,gt25,D,Regel,Sonst
+maennl,gt25,EU,RegelPlus1,Technik
+weibl,gt25,RestDerWelt,laenger,Geisteswiss

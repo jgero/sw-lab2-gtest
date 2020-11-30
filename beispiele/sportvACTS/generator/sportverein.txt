@@ -1,0 +1,32 @@
+[System]
+-- specify system name
+Name: sportverein
+
+[Parameter]
+-- general syntax is parameter_name : value1, value2, …
+Tischtennis (boolean) : true, false
+Turnen (boolean) : true, false
+Ballsport (boolean) : true, false
+Fitness (boolean) : true, false
+Mitgliedstatus (enum) : Kind/Jugendlicher, Erwachsener, Ermaessigt, Passiv
+
+[Relation]
+-- this section is optional
+-- general format Rx : (p1, p2, …, pk, Strength)
+
+[Constraint]
+-- this section is also optional
+Mitgliedstatus="Passiv"=>Tischtennis=false && Turnen=false && Ballsport=false && Fitness=false
+Mitgliedstatus!="Passiv"=>Tischtennis=true || Turnen=true || Ballsport=true || Fitness=true
+
+[Test Set]
+-- set existing test set for extend mode. this is also optional
+-- * represents don't-care value
+Tischtennis,Turnen,Ballsport,Fitness,Mitgliedstatus
+true,false,false,false,Kind/Jugendlicher
+false,true,true,true,Kind/Jugendlicher
+true,true,false,true,Erwachsener
+false,false,true,false,Erwachsener
+true,true,true,false,Ermaessigt
+false,false,false,true,Ermaessigt
+false,false,false,false,Passiv

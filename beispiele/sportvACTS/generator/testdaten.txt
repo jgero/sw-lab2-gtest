@@ -1,0 +1,8 @@
+Tischtennis,Turnen,Ballsport,Fitness,Mitgliedsstatus
+true,false,false,false,Kind/Jugendlicher,12
+false,true,true,true,Kind/Jugendlicher,37
+true,true,false,true,Erwachsener,44
+false,false,true,false,Erwachsener,27
+true,true,true,false,Ermaessigt,33
+false,false,false,true,Ermaessigt,18
+false,false,false,false,Passiv,20
