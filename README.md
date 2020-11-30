@@ -11,8 +11,8 @@
 
 ## notes
 
-The examples are from (this website by the author of the book Lean Testin für C++ Programmierer)[http://leantesting.de/].
+The examples are from [this website by the author of the book Lean Testin für C++ Programmierer](http://leantesting.de/).
 In the book gtest version 1.7.0 is used, which is also used in this docker container.
 
 A very small modification had to be made in the `include.mf` file because of an error when compiling the test. The solution and 
-modification are as described in (this question on StackOverflow)[https://stackoverflow.com/questions/10315016/error-during-making-gtest].
+modification are as described in [this question on StackOverflow](https://stackoverflow.com/questions/10315016/error-during-making-gtest).
