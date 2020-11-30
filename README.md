@@ -2,8 +2,8 @@
 
 ## usage
 
-1. run `make to build docker image`
-2. run `make run to start docker container`
+1. run `make` to build docker image
+2. run `make run` to start docker container
 3. examples are mounted to `/app` in the container (run `cd /app` in the console of the container)
   - because the examples are monted into the container changes you make to the files on your system will also appear in the container
 4. change dir into any of the example directories and run `make` to build the tests
