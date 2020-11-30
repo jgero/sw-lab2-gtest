@@ -16,3 +16,5 @@ In the book gtest version 1.7.0 is used, which is also used in this docker conta
 
 A very small modification had to be made in the `include.mf` file because of an error when compiling the test. The solution and 
 modification are as described in [this question on StackOverflow](https://stackoverflow.com/questions/10315016/error-during-making-gtest).
+
+On Mac the `make run` my fail, then it has to be run manually with the volume mount in quotations (... `-v "$(pwd)/beispiele:/app" ...`).
